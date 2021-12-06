@@ -1,0 +1,53 @@
+/*
+colors used
+text color: black;
+primary-background-color: lightgray;
+*/
+
+:root {
+  --heading-weight: 700px;
+  --font-size: 16px;
+  --media-font: 12px;
+  --media-h1: 18px;
+  --media-h2: 16px;
+  --media-h3: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html body {
+  /* primary color and font for the body */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400px;
+  font-size: 16px;
+  color: black;
+  background-color: lightgray;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: var(--heading-weight);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: var(--heading-weight);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--heading-weight);
+}
+
+.js-content {
+  /* content from js styling */
+  max-width: 550px;
+  height: 100%;
+  margin: auto;
+}
