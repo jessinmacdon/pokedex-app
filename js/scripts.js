@@ -23,13 +23,11 @@ let pokemonList = [
 
 //display as a list
 document.write('<ul>')
-pokemonList.forEach(function(Pokemon) {
-  let pokemonName = pokemonList.name
-  let pokemonHeight = pokemonList.height
-  let pokemonTypes = pokemonList.types
-  document.write('<li>');
-  document.write(pokemonName + " - Height: " + pokemonHeight);
- if (pokemonHeight > 1.7) document.write('  - Wow, thats tall!');
- document.write("</li>");
+pokemonList.forEach((item, i) => {
+  document.write('<li>')
+  //display all array items .names and heights on DOM (using for loop)
+  document.write(pokemonList[i].name + " - Height: " + pokemonList[i].height);
+  // for the highest value for height display a string (using conditionals)
+  if (pokemonList[i].height > 1.0) document.write("  - Wow, thats tall!");
+  document.write("</li>");
 });
-document.write("</ul>");
