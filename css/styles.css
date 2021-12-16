@@ -11,6 +11,7 @@ primary-background-color: lightgray;
   --media-h1: 18px;
   --media-h2: 16px;
   --media-h3: 14px;
+  --p-weight: 400px;
 }
 
 * {
@@ -23,8 +24,8 @@ html body {
   padding: 0;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400px;
-  font-size: 16px;
+  font-weight: var(--p-weight);
+  font-size: var(--font-size);
   color: black;
   background-color: lightgray;
   line-height: 1.6;
@@ -45,9 +46,50 @@ h3 {
   font-weight: var(--heading-weight);
 }
 
-.js-content {
-  /* content from js styling */
-  max-width: 550px;
-  height: 100%;
-  margin: auto;
+.button-class {
+  background-color: red;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+  border: 5px solid black;
+  border-radius: 20px;
+  padding: 16px 32px;
+  display: inline-flex;
+  margin: 6px 6px;
+  width: 600px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* effect applied to all buttons */
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.pokedex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pokemon-list {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 560px) and (max-width: 700px) {
+  .button-class {
+    font-size: 30px;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 560px) {
+  .button-class {
+    font-size: 20px;
+    width: 250px;
+  }
 }

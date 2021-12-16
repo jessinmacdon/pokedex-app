@@ -5,6 +5,12 @@
 * Browsers: last 4 version
 */
 
+/*
+colors used
+text color: black;
+primary-background-color: lightgray;
+*/
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -38,22 +44,61 @@ h3 {
   font-weight: 700px;
 }
 
-.js-content {
-  /* content from js styling */
-  max-width: 550px;
-  height: 100%;
-  margin: auto;
-}.example {
-    display: -ms-grid;
-    display: grid;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-    background: -o-linear-gradient(top, white, black);
-    background: linear-gradient(to bottom, white, black);
+.button-class {
+  background-color: red;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+  border: 5px solid black;
+  border-radius: 20px;
+  padding: 16px 32px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 6px 6px;
+  width: 600px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* effect applied to all buttons */
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.pokedex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pokemon-list {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 560px) and (max-width: 700px) {
+  .button-class {
+    font-size: 30px;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 560px) {
+  .button-class {
+    font-size: 20px;
+    width: 250px;
+  }
 }
