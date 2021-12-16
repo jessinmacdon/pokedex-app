@@ -1,58 +1,71 @@
 //IIFE assigned to new variable
 let pokemonRepository = (function () {
-  let pokemonList = [
+  let repository = [
     {
       name: 'Mankey',
       height: 0.5,
-      types: ['flying', 'grass']
+      types: ['flying', 'grass'],
     },
     {
       name: 'Abra',
       height: 0.9,
-      types: ['ghost', 'fighting']
+      types: ['ghost', 'fighting'],
     },
     {
       name:'Meel',
       height: 1.1,
-      types: ['electric', 'water']
+      types: ['electric', 'water'],
     },
     {
       name: 'Mew',
       height: 0.4,
-      types: ['dragon', 'psychic']
+      types: ['dragon', 'psychic'],
     }
   ];
 
   //returning pokemon list
   function getAll() {
-    return pokemonList;
+    return repository;
   }
 
   // addiing new pokemnon (item) to array
   function add(pokemon) {
-    pokemonList.push(pokemon)
+    repository.push(pokemon);
+  }
+
+  //new function called on the eventlistener below (logs pokemon.name to console)
+  function showDetails(pokemon) {
+    console.log(pokemon.name);
+  }
+
+  // new function for adding class, ul and li items
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listItem = document.createElement("li");
+    let button = document.createElement("button");
+
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem);
+
+    //eventlistener on the button - logs the name of the pokemon to the console
+    button.addEventListener("click", function () {
+        showDetails(pokemon);
+      });
   }
 
   return {
-    getAll : getAll,
-    add: add
+    add: add,
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
 //end of iife
 
 
-//display as a list
-document.write('<ul>')
 //adding getAll to forEach loop
-pokemonRepository.getAll().forEach(function(pokemon){
-  let pokemonName = pokemon.name
-  let pokemonHeight = pokemon.height
-  let pokemonTypes = pokemon.types
-  //print pkemon list
-  document.write('<li>');
-  document.write(pokemonName + " - Height: " + pokemonHeight);
-  //adding conditional
-  if (pokemonHeight > 1) document.write("  - Wow, thats tall!");
-  document.write("</li>");
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
 });
-document.write("</ul>");
