@@ -14,10 +14,6 @@ primary-background-color: lightgray;
   --p-weight: 400px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html body {
   /* primary color and font for the body */
   margin: 0;
@@ -46,17 +42,22 @@ h3 {
   font-weight: var(--heading-weight);
 }
 
+:active {
+  color: blue;
+}
+
 .button-class {
-  background-color: red;
-  color: white;
+  background-color: #2240aa;
+  color: black;
   font-size: 40px;
   text-decoration: none;
-  border: 5px solid black;
-  border-radius: 20px;
+  border-radius: 5px;
+  box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
   padding: 16px 32px;
   display: inline-flex;
   margin: 6px 6px;
   width: 600px;
+  height: 100px;
   cursor: pointer;
   transition-duration: 0.3s;
 }
@@ -66,8 +67,8 @@ button:focus,
 .button:hover,
 .button:focus {
   /* effect applied to all buttons */
+  box-shadow: none;
   cursor: pointer;
-  opacity: 0.6;
 }
 
 .pokedex {
@@ -84,6 +85,7 @@ button:focus,
   .button-class {
     font-size: 30px;
     width: 450px;
+    height: 80px;
   }
 }
 
@@ -91,5 +93,6 @@ button:focus,
   .button-class {
     font-size: 20px;
     width: 250px;
+    height: 70px;
   }
 }
