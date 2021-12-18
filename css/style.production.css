@@ -50,7 +50,7 @@ h3 {
   text-decoration: none;
   border-radius: 5px;
   -webkit-box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
-          box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
+  box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
   padding: 16px 32px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -60,8 +60,8 @@ h3 {
   height: 100px;
   cursor: pointer;
   -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 button:hover,
@@ -70,7 +70,7 @@ button:focus,
 .button:focus {
   /* effect applied to all buttons */
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   cursor: pointer;
 }
 
@@ -79,12 +79,12 @@ button:focus,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .pokemon-list {
