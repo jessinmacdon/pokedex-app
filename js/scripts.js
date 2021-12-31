@@ -93,10 +93,15 @@ let pokemonRepository = (function () {
     let imageElement = document.createElement('img');
     imageElement.src = pokemon.imageUrl;
 
+    let typesElement = document.createElement('p');
+    typesElement.classList.add('types');
+    typesElement.innerText = pokemon.types;
+
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
     modal.appendChild(heightElement);
     modal.appendChild(imageElement);
+    modal.appendChild(typesElement);
     modalContainer.appendChild(modal);
 
     modalContainer.classList.add('is-visible');
