@@ -23,7 +23,7 @@ html body {
   font-weight: var(--p-weight);
   font-size: var(--font-size);
   color: black;
-  background-color: black;
+  background-color: white;
   line-height: 1.6;
 }
 
@@ -47,12 +47,7 @@ h3 {
 }
 
 .header {
-  display: block;
-  border-bottom: 2px, solid black;
-}
-
-.header__item {
-  padding-left: 15px;
+  margin-bottom: 80px;
 }
 
 li {
@@ -63,13 +58,15 @@ li {
 .button-class {
   background-color: white;
   color: black;
-  font-size: 40px;
+  font-size: 30px;
+  border-style: hidden;
+  align-content: center;
   text-decoration: none;
   border-radius: 5px;
   box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
   padding: 16px 32px;
   display: inline-block;
-  margin: 6px 6px;
+  margin: 5px;
   width: 300px;
   height: 200px;
   cursor: pointer;
@@ -83,6 +80,7 @@ button:focus,
   /* effect applied to all buttons */
   box-shadow: none;
   cursor: pointer;
+  background-color: lightblue;
 }
 
 .pokedex {
@@ -98,79 +96,113 @@ button:focus,
   text-align: center;
 }
 
-#modal-container {
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* to show it above other content */
-  z-index: 999;
-  /* to allow scrolling if the screen is not high enough */
-  overflow: auto;
-  /* this is used to center the modal */
-  display: none;
-  text-align: center;
+.modal-content{
+  background-color: lightblue;
 }
 
-#modal-container.is-visible {
-  /* add CSS for modal container */
-  display: block;
+.modal-header, .modal-body  {
+  border-bottom: 1px Solid black;
+}
+
+/*#modal-container.is-visible {
+add CSS for modal container
+display: block;
 }
 
 .modal {
-  margin: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #ECF0F1;
-  padding: 15px;
-  width: 100%;
-  max-width: 700px;
-  text-align: left;
-  border-radius: 15px;
+margin: auto;
+display: inline-block;
+box-sizing: border-box;
+background: #ECF0F1;
+padding: 15px;
+width: 100%;
+max-width: 700px;
+text-align: left;
+border-radius: 15px;
+}*/
+
+/*.modal-close {
+float: right;
+-webkit-appearance: none;
+border: 0;
+background: none;
+color: #FF9671;
+text-decoration: underline;
+cursor: pointer;
+font-weight: 300;
+font-size: 14px;
 }
 
-.modal-close {
-  float: right;
-  -webkit-appearance: none;
-  border: 0;
-  background: none;
-  color: #FF9671;
-  text-decoration: underline;
-  cursor: pointer;
-  font-weight: 300;
-  font-size: 14px;
+.modaltitle {
+display: block;
+text-align: center;
+}*/
+
+.main-heading {
+  display: block;
+  text-align: center;
+}
+
+.search-pokemon {
+  display: block;
+  text-align: right;
+  margin-right: 30px;
+  border-radius: 10px;
+}
+
+.search-pokemon-item {
+  border-radius: 10px;
 }
 
 .modal img {
   position: relative;
   display: block;
-  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 300px;
+}
+
+.typesbtnelement {
+  display: Block;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
   margin: auto;
-  width: 500px;
+}
+
+.heightbtn {
+  display: block;
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+  border-color: transparent;
+}
+
+.weightbtn {
+  display: block;
+  text-align: center;
+  margin: 5px auto 5px auto;
+  border-radius: 5px;
+  border-color: transparent;
 }
 
 @media screen and (min-width: 560px) and (max-width: 700px) {
   .button-class {
-    font-size: 30px;
-    width: 450px;
-    height: 80px;
+    font-size: 20px;
+    width: 250px;
   }
 }
 
 @media screen and (min-width: 0) and (max-width: 560px) {
   .button-class {
     font-size: 20px;
-    width: 250px;
-    height: 70px;
+    width: 200px;
   }
 }
 
 @media screen and (min-width: 0) and (max-width: 560px) {
-  .header-item {
+  .search-pokemon {
     text-align: center;
   }
 }
