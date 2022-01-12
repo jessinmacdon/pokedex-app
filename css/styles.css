@@ -51,8 +51,7 @@ h3 {
 }
 
 li {
-  display: inline-block;
-  margin: 5px;
+  margin: 10px auto;
 }
 
 .button-class {
@@ -141,12 +140,13 @@ text-align: center;
 .main-heading {
   display: block;
   text-align: center;
+  font-size: 40px;
 }
 
 .search-pokemon {
   display: block;
-  text-align: right;
-  margin-right: 30px;
+  text-align: center;
+  margin: 20px auto;
   border-radius: 10px;
 }
 
@@ -162,16 +162,20 @@ text-align: center;
   height: 300px;
 }
 
-.typesbtnelement {
-  display: Block;
+.btn-info {
+  display: inline-block;
   text-align: center;
   border-radius: 5px;
-  padding: 10px;
   border: none;
-  margin: auto;
+  margin-left: 4px;
 }
 
-.heightbtn {
+.typesElementContainer {
+  display: block;
+  text-align: center;
+}
+
+.btn-primary {
   display: block;
   text-align: center;
   margin: auto;
@@ -179,10 +183,10 @@ text-align: center;
   border-color: transparent;
 }
 
-.weightbtn {
+.btn-secondary {
   display: block;
   text-align: center;
-  margin: 5px auto 5px auto;
+  margin: 5px auto;
   border-radius: 5px;
   border-color: transparent;
 }

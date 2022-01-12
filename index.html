@@ -6,7 +6,7 @@
     <title>Pokémon Library</title>
     <link rel="title icon" type="image/svg" href="img/placeholder-title-image.svg">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/style.production.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -19,10 +19,10 @@
     </header>
     <h1 class="main-heading">POKEDEX</h1>
     <div class="search-pokemon">
-      <input class="search-pokemon-item" type="search" placeholder="Search Pokemon" aria-label="Search" width="200">
+      <input class="search-pokemon-item" type="search" id="search" placeholder="Search Pokemon" aria-label="Search" width="200">
     </div>
     <main class="pokedex">
-      <ul class="pokemon-list d-flex flex-wrap"></ul>
+      <ul class="pokemon-list d-flex flex-wrap justify-content-center col-12 ml-4 mr-4 mt-3" ></ul>
 
       <!-- Modal -->
       <div class="modal fade" id="pokedex" tabindex="-1" role="dialog" aria-labelledby="pokedex" aria-hidden="true">
@@ -38,7 +38,7 @@
               ...
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
