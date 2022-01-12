@@ -57,11 +57,11 @@ li {
   font-size: 30px;
   border-style: hidden;
   -ms-flex-line-pack: center;
-  align-content: center;
+      align-content: center;
   text-decoration: none;
   border-radius: 5px;
   -webkit-box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
-  box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
+          box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
   padding: 16px 32px;
   display: inline-block;
   margin: 5px;
@@ -69,8 +69,8 @@ li {
   height: 200px;
   cursor: pointer;
   -webkit-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 button:hover,
@@ -79,7 +79,7 @@ button:focus,
 .button:focus {
   /* effect applied to all buttons */
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   cursor: pointer;
   background-color: lightblue;
 }
@@ -89,12 +89,12 @@ button:focus,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .pokemon-list {
@@ -190,6 +190,7 @@ text-align: center;
   margin: auto;
   border-radius: 5px;
   border-color: transparent;
+  background-color: #0072ee;
 }
 
 .btn-secondary {
@@ -214,8 +215,8 @@ text-align: center;
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 560px) {
-  .search-pokemon {
-    text-align: center;
+@media screen and (min-width: 0) and (max-width: 450px) {
+  .button-class {
+    width: 300px;
   }
 }

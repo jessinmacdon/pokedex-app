@@ -181,6 +181,7 @@ text-align: center;
   margin: auto;
   border-radius: 5px;
   border-color: transparent;
+  background-color: #0072ee;
 }
 
 .btn-secondary {
@@ -205,8 +206,8 @@ text-align: center;
   }
 }
 
-@media screen and (min-width: 0) and (max-width: 560px) {
-  .search-pokemon {
-    text-align: center;
+@media screen and (min-width: 0) and (max-width: 450px) {
+  .button-class {
+    width: 300px;
   }
 }

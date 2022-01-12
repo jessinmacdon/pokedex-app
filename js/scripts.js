@@ -4,12 +4,12 @@ let pokemonRepository = (function () {
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   let modal = document.querySelector('#pokedex');
   const typeColors = {
-    'bug': '#a9b720', 'flying': '#a890f0', 'fire': '#f08030',
-    'psychic': '#f95887', 'normal': '#a7a877', 'water': '#6790f0', 'grass': '#78c84f',
-    'electric': '#f9cf30', 'ice': '#99d7d8', 'fighting': '#c13128',
-    'poison': '#9f409f', 'ground': '#e1bf68', 'rock': '#6f5848',
+    'bug': '#737d00', 'flying': '#835fdb', 'fire': '#ba5d00',
+    'psychic': '#eb0065', 'normal': '#797b00', 'water': '#2d73e2', 'grass': '#418600',
+    'electric': '#8e01fd', 'ice': '#008485', 'fighting': '#c13128',
+    'poison': '#9f409f', 'ground': '#654320', 'rock': '#6f5848',
     'ghost': '#705898', 'dark': '#6f5848', 'dragon': '#7138f8',
-    'steel': '#b8b8d0', 'fairy': '#efb5bc',
+    'steel': '#73739a', 'fairy': '#bb5667',
   }
 
   const search_input = document.getElementById('search');
@@ -110,6 +110,7 @@ let pokemonRepository = (function () {
     let imageElement = document.createElement('img');
     imageElement.classList.add('modal-img');
     imageElement.src = pokemon.imageUrl;
+    imageElement.alt = 'the pokemon image on a lightblue background';
     //let imageElement = $('<img class="modal-img" src="">');
     //imageElement.attr("src", pokemon.imageUrl);
 
