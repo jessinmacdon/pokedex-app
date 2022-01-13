@@ -21,4 +21,5 @@ Linters employed:
 - Es6 lint + prettier
 
 
-![This is an image of the App user interface](img/app-ui.png)
+![This is an image of the App user interface](img/app-ui-1.png)
+![This is an image of the App user interface](img/app-ui-2.png)
