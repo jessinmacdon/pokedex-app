@@ -20,3 +20,7 @@ Linters employed:
 - Stylelint
 - Es6 lint + prettier
 
+<<<<<<< Updated upstream
+=======
+![This is an image of the App user interface](img/app-ui.png)
+>>>>>>> Stashed changes
