@@ -1,4 +1,4 @@
-# Simple Pokemon App (Pokemon-Library)
+# Simple Pokemon Library (Pokedex App)
 
 **Project description**
 The aim of this project is to build a simple Pokédex application that loads a list of  150 pokemons with a few other details like the height, weight and types.
