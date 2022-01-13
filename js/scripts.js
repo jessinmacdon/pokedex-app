@@ -12,10 +12,6 @@ let pokemonRepository = (function () {
     'steel': '#73739a', 'fairy': '#bb5667',
   }
 
-  const search_input = document.getElementById('search');
-  //const results = document.getElementById('results');
-
-  let search_pokemon = '';
 
   //returning pokemon list
   function getAll() {
@@ -29,25 +25,23 @@ let pokemonRepository = (function () {
 
   // new function for adding class, ul and li items
   function addListItem(pokemon) {
-    let pokemonList = document.querySelector(".pokemon-list");
-    let listItem = document.createElement("li");
+    let pokemonList = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
     listItem.classList.add('group-list-item');
-    let button = document.createElement("button");
+    let button = document.createElement('button');
 
     button.setAttribute('data-target', '#pokedex');
     button.setAttribute('data-toggle', 'modal');
 
     button.innerText = pokemon.name;
-    button.classList.add("button-class");
+    button.classList.add('button-class');
 
-    //button.setAttribute('data-toggle','modal');
-    //button.setAttribute('data-target','#pokedex');
 
     listItem.appendChild(button);
     pokemonList.appendChild(listItem);
 
     //eventlistener on the button - logs the name of the pokemon to the console
-    button.addEventListener("click", function(event) {
+    button.addEventListener('click', function() {
       showDetails(pokemon, modal);
     });
   }
@@ -94,35 +88,26 @@ let pokemonRepository = (function () {
   function showModal(pokemon) {
     let modalBody = document.querySelector('.modal-body');
     let modalTitle = document.querySelector('.modal-title');
-    //let modalBody = $('.modal-body');
-    //let modalTitle = $('.modal-title');
 
     modalBody.innerHTML = '';
     modalTitle.innerHTML = '';
-    /*modalTitle.empty();
-    modalBody.empty();*/
 
     let titleElement = document.createElement('h1');
     titleElement.classList.add('text-capitalize');
     titleElement.innerText = pokemon.name;
-    //let titleElement = $('<h1 class="text-capitalize">' + pokemon.name + '</h1>');
 
     let imageElement = document.createElement('img');
     imageElement.classList.add('modal-img');
     imageElement.src = pokemon.imageUrl;
     imageElement.alt = 'the pokemon image on a lightblue background';
-    //let imageElement = $('<img class="modal-img" src="">');
-    //imageElement.attr("src", pokemon.imageUrl);
 
     let heightElement = document.createElement('button');
     heightElement.classList.add('btn-primary');
     heightElement.innerText = 'Height: ' + pokemon.height;
-    //let heightElement = $('<button class="heightbtn btn-primary">' + "Height: " + pokemon.height + "</button>");
 
     let weightElement = document.createElement('button');
     weightElement.classList.add('btn-secondary');
     weightElement.innerText = 'Weight: ' + pokemon.weight;
-    //let weightElement = $('<button class="weightbtn btn-primary">' + "Weight: " + pokemon.weight + "</button>");
 
     let typesElement = document.createElement('div');
     typesElement.classList.add('typesElementContainer');
@@ -136,32 +121,23 @@ let pokemonRepository = (function () {
       typesElement.appendChild(typesButtonElement);
     });
 
-
-    /*let typesElement = $('<button class="typesbtnelement btn-primary">' + "Types: " + pokemon.types + "</button>");*/
-    /*let abilitiesElement = $('<p>' + 'Abilities : ' + pokemon.abilities + '</p>');*/
-
     modalTitle.append(titleElement);
     modalBody.append(imageElement);
     modalBody.append(heightElement);
     modalBody.append(weightElement);
     modalBody.append(typesElement);
-
-
-    /*$('#pokedex').modal();*/
   }
 
-  search_input.addEventListener('input', e => {
-    search_term = e.target.value;
-    showDetails();
+  // adding search to page
+  $(document).ready(function(){
+    $('#search-pokemon').on('input', function() {
+      var value = $(this).val().toLowerCase();
+      $('.group-list-item').filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
   });
-  /*$(document).ready(function(){
-  $(".search-pokemon").on("input", function() {
-  var value = $(this).val().toLowerCase();
-  $(".button-class").filter(function() {
-  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-});
-});
-});*/
+
 
 
 return {
