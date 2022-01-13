@@ -75,7 +75,7 @@ button:focus,
   /* effect applied to all buttons */
   box-shadow: none;
   cursor: pointer;
-  background-color: #ffd888;
+  background-color: #ffdf56;
   opacity: 0.7;
 }
 
