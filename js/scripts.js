@@ -68,7 +68,6 @@ let pokemonRepository = (function () {
     return fetch(url).then(function (response) {
       return response.json();
     }).then(function (details) {
-      console.log(details);
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
       item.weight = details.weight;
