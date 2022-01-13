@@ -58,7 +58,7 @@ li {
   align-content: center;
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
+  box-shadow: 4px 3px 19px 0 rgba(0, 0, 0, 0.3);
   padding: 16px 32px;
   display: inline-block;
   margin: 5px;
@@ -92,47 +92,14 @@ button:focus,
   text-align: center;
 }
 
-.modal-content{
+.modal-content {
   background-color: lightblue;
 }
 
-.modal-header, .modal-body  {
-  border-bottom: 1px Solid black;
+.modal-header,
+.modal-body {
+  border-bottom: 1px solid black;
 }
-
-/*#modal-container.is-visible {
-add CSS for modal container
-display: block;
-}
-
-.modal {
-margin: auto;
-display: inline-block;
-box-sizing: border-box;
-background: #ECF0F1;
-padding: 15px;
-width: 100%;
-max-width: 700px;
-text-align: left;
-border-radius: 15px;
-}*/
-
-/*.modal-close {
-float: right;
--webkit-appearance: none;
-border: 0;
-background: none;
-color: #FF9671;
-text-decoration: underline;
-cursor: pointer;
-font-weight: 300;
-font-size: 14px;
-}
-
-.modaltitle {
-display: block;
-text-align: center;
-}*/
 
 .main-heading {
   display: block;
@@ -205,6 +172,9 @@ footer {
   font-weight: 900;
 }
 
+input {
+  width: 250px;
+}
 
 /* unvisited link */
 a:link {

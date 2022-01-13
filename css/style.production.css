@@ -53,11 +53,11 @@ li {
   font-size: 30px;
   border-style: hidden;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   text-decoration: none;
   border-radius: 5px;
-  -webkit-box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
-          box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 4px 3px 19px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 3px 19px 0 rgba(0, 0, 0, 0.3);
   padding: 16px 32px;
   display: inline-block;
   margin: 5px;
@@ -65,8 +65,8 @@ li {
   height: 200px;
   cursor: pointer;
   -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 button:hover,
@@ -75,7 +75,7 @@ button:focus,
 .button:focus {
   /* effect applied to all buttons */
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   cursor: pointer;
   background-color: #ffd888;
   opacity: 0.7;
@@ -86,12 +86,12 @@ button:focus,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .pokemon-list {
@@ -101,47 +101,14 @@ button:focus,
   text-align: center;
 }
 
-.modal-content{
+.modal-content {
   background-color: lightblue;
 }
 
-.modal-header, .modal-body  {
-  border-bottom: 1px Solid black;
+.modal-header,
+.modal-body {
+  border-bottom: 1px solid black;
 }
-
-/*#modal-container.is-visible {
-add CSS for modal container
-display: block;
-}
-
-.modal {
-margin: auto;
-display: inline-block;
-box-sizing: border-box;
-background: #ECF0F1;
-padding: 15px;
-width: 100%;
-max-width: 700px;
-text-align: left;
-border-radius: 15px;
-}*/
-
-/*.modal-close {
-float: right;
--webkit-appearance: none;
-border: 0;
-background: none;
-color: #FF9671;
-text-decoration: underline;
-cursor: pointer;
-font-weight: 300;
-font-size: 14px;
-}
-
-.modaltitle {
-display: block;
-text-align: center;
-}*/
 
 .main-heading {
   display: block;
@@ -204,13 +171,13 @@ footer {
   display: flex;
   margin-top: auto;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   background-color: #ffdf57;
   width: 100%;
   height: 100px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-top: 25px;
 }
 
@@ -219,6 +186,9 @@ footer {
   font-weight: 900;
 }
 
+input {
+  width: 250px;
+}
 
 /* unvisited link */
 a:link {
