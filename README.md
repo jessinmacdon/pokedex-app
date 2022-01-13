@@ -19,3 +19,4 @@ Linters employed:
 - W3C Linters
 - Stylelint
 - Es6 lint + prettier
+
