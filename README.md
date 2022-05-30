@@ -22,10 +22,17 @@ Linters employed:
 - Es6 lint + prettier
 
 ---
-[Check out Pokedex App on ghpages](https://jessinmacdon.github.io/pokedex-app/)
+[Live Demo Here](https://jessinmacdon.github.io/pokedex-app/)
 
 ---
 ![This is an image of the App user interface](img/app-ui-1.png)
+
+
 ![This is an image of the App user interface](img/app-ui-2.png)
 
+Mobile View
+
+![This is an image of the App user interface](img/mobile-look.jpg)
+
+![This is an image of the App user interface](img/mobile-look-2.jpg)
 
